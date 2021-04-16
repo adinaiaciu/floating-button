@@ -311,8 +311,7 @@
                         </option>
                         <option name="values">
                           <map>
-                            <entry key="color" value="32a6bd" />
-                            <entry key="outputName" value="ic_profile" />
+                            <entry key="outputName" value="ic_user_picture" />
                             <entry key="sourceFile" value="C:\Users\sorin\AndroidStudioProjects\Buton" />
                           </map>
                         </option>

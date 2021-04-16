@@ -100,19 +100,21 @@ class Login : AppCompatActivity() {
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
 
-        if (requestCode==PICK_IMAGE_CODE && data!=null && resultCode== RESULT_OK){
+        if (requestCode==PICK_IMAGE_CODE && data!=null && resultCode==RESULT_OK){
             val selectedImage=data.data
             val filePathColum=arrayOf(MediaStore.Images.Media.DATA)
             val cursor= contentResolver.query(selectedImage!!, filePathColum,null,null,null)
+            //cursor!!.moveToFirst()
             //am adaugat !! la selectedImage
             if (cursor != null) {
+                //cursor.moveToFirst()
                 cursor.moveToFirst()
             }
             //initial cursor.moveToFirst()
 
-            val coulomIndex= cursor?.getColumnIndex(filePathColum[0])
-            //val coulomIndex=cursor.getColumnIndex(filePathColum[0])
-            val picturePAth= cursor!!.getString(coulomIndex!!)
+            //val coulomIndex= cursor.getColumnIndex(filePathColum[0])
+            val coulomIndex=cursor!!.getColumnIndex(filePathColum[0])
+            val picturePAth= cursor.getString(coulomIndex)
             //val picturePAth=cursor.getString(coulomIndex)
             if (cursor != null) {
                 cursor.close()
