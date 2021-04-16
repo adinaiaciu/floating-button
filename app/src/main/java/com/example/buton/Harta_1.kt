@@ -219,5 +219,6 @@ class Harta_1 : AppCompatActivity(), OnMapReadyCallback {
         mMap.addMarker(MarkerOptions().position(birsescuAgatha).title("metal, aluminium, paper, cardboard, glass, plastic, PET").icon(
                 BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_CYAN)))
 
+
     }
 }

@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">Buton</string>
     <string name="title_activity_harta_1">Map</string>
+    <string name="mapButtonName">Map</string>
+    <string name="profileButtonName">Profile</string>
+    <string name="feedButtonName"></string>
 </resources>
