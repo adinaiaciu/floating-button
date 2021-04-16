@@ -18,6 +18,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 class MainActivity : AppCompatActivity() {
 
 
+
     lateinit var toolbar: ActionBar
 
     private val mOnNavigationItemSelectedListener =
@@ -36,6 +37,9 @@ class MainActivity : AppCompatActivity() {
                         return@OnNavigationItemSelectedListener true
                     }
                     R.id.miProfile -> {
+                        toolbar.title = "Profile"
+
+                        run { startActivity(Intent(this, Login::class.java)) }
 
                         return@OnNavigationItemSelectedListener true
                     }
