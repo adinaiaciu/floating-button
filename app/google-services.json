@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "311105220061",
+    "project_id": "reciclarity1",
+    "storage_bucket": "reciclarity1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:311105220061:android:05ebb209b56699efc39a34",
+        "android_client_info": {
+          "package_name": "com.example.buton"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "311105220061-v66j9qh90s8h901v1jgsbrrrmrl5b3gc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDYaZ7PfqpVEYgtsYOw-s4l0qLV1cwI_AE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "311105220061-v66j9qh90s8h901v1jgsbrrrmrl5b3gc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
