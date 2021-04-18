@@ -170,7 +170,7 @@ fun SplitString(email:String):String{
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
 
-        if (requestCode==PICK_IMAGE_CODE && data!=null){
+        if (requestCode==PICK_IMAGE_CODE && data!=null && resultCode==RESULT_OK){
             val selectedImage=data.data
             val filePathColum=arrayOf(MediaStore.Images.Media.DATA)
             val cursor= contentResolver.query(selectedImage!!, filePathColum,null,null,null)
