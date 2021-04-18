@@ -35,4 +35,5 @@
         android:layout_height="wrap_content"
         android:src="@drawable/ic_feed"
         app:layout_anchor="@id/bottomAppBar" />
+
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

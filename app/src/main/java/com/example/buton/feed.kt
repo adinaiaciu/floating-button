@@ -1,48 +1,32 @@
 package com.example.buton
 
-import android.app.SearchManager
-
-import android.graphics.Bitmap
-import android.graphics.BitmapFactory
-import android.os.AsyncTask
-
-
-import android.provider.MediaStore
-import android.view.Menu
-import android.view.MenuItem
-
-import android.widget.SearchView
-import android.widget.Toast
-
-
-
-
 import android.content.Context
-import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseAdapter
 import androidx.appcompat.app.AppCompatActivity
+import kotlinx.android.synthetic.main.activity_feed.*
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.activity_test.*
 
-class test : AppCompatActivity() {
+class feed : AppCompatActivity() {
     var ListTweets=ArrayList<Ticket>()
-    var adapter:MyTweetAdapter?=null
+    var adpater: MyTweetAdpater?=null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_test)
+        setContentView(R.layout.activity_feed)
+
 
         ListTweets.add(Ticket("0", "him", "url", "add"))
         ListTweets.add(Ticket("0", "him", "url", "clara"))
         ListTweets.add(Ticket("0", "him", "url", "clara"))
         ListTweets.add(Ticket("0", "him", "url", "clara"))
 
-        adapter=MyTweetAdapter(this, ListTweets)
-        lvTweets.adapter=adapter
+        adpater=MyTweetAdpater(this, ListTweets)
+        lvTweets.adapter=adpater
     }
-        inner class MyTweetAdapter: BaseAdapter {
+
+    inner class MyTweetAdpater: BaseAdapter {
         var listNotesAdapter = ArrayList<Ticket>()
         var context: Context? = null
 
@@ -74,12 +58,14 @@ class test : AppCompatActivity() {
             return listNotesAdapter[p0]
         }
 
-
-        override fun getItem(p0: Int): Long {
+        override fun getItemId(p0: Int): Long {
             return p0.toLong()
         }
 
         override fun getCount(): Int {
+
             return listNotesAdapter.size
+
         }
-}}
+    }
+}

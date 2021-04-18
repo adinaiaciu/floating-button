@@ -34,6 +34,9 @@ class MainActivity : AppCompatActivity() {
                     }
                     R.id.miFeed -> {
 
+                        toolbar.title = "Feed"
+                        //run { startActivity(Intent(this, feed::class.java)) }
+
                         return@OnNavigationItemSelectedListener true
                     }
                     R.id.miProfile -> {
@@ -59,7 +62,8 @@ class MainActivity : AppCompatActivity() {
         toolbar = supportActionBar!!
         val bottomNavigation: BottomNavigationView = findViewById(R.id.bottomNavigationView)
         bottomNavigation.background = null
-        //        bottomNavigationView.menu.getItem (1).isEnabled=false
+        fab.setOnClickListener({startActivity(Intent(this, feed::class.java)) })
+        bottomNavigationView.menu.getItem (1).isEnabled=false
         bottomNavigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener)
     }
 }
