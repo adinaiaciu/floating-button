@@ -36,6 +36,8 @@ class Login : AppCompatActivity() {
 
 //    private lateinit var auth: FirebaseAuth
     override fun onCreate(savedInstanceState: Bundle?) {
+    supportActionBar?.hide()
+
 //        auth = Firebase.auth
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
@@ -43,34 +45,6 @@ class Login : AppCompatActivity() {
     mAuth= FirebaseAuth.getInstance()
 
 
-//        buttonSignUp.setOnClickListener {
-//            val inputMethodManager = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
-//            inputMethodManager.hideSoftInputFromWindow(currentFocus!!.windowToken, 0)
-//            if (editTextEmail.text.toString().isNullOrEmpty() || editTextPassword.text.toString()
-//                    .isNullOrEmpty())
-//                textViewResponse.text = "Email Address or Password is not provided"
-//            else {
-//                auth.createUserWithEmailAndPassword(
-//                    editTextEmail.text.toString(),
-//                    editTextPassword.text.toString())
-//                    .addOnCompleteListener(this) { task ->
-//                        if (task.isSuccessful) {
-//                            textViewResponse.text =
-//                                "Sign Up successfull. Email and Password created"
-//                            val user = auth.currentUser
-//                            updateUI(user)
-//                        } else {
-//                            textViewResponse.text = "Sign Up Failed"
-//                            updateUI(null)
-//                        }
-//                    }
-//            }
-//            fun updateUI(currentUser: FirebaseUser?) {
-//
-//            }
-//        }
-//
-//
         imagePerson.setOnClickListener(View.OnClickListener {
             checkPermission()
         })
@@ -97,7 +71,7 @@ class Login : AppCompatActivity() {
   fun SaveImageInFireBase(currentUser:FirebaseUser){
       val email:String=currentUser!!.email.toString()
       val storage=FirebaseStorage.getInstance()
-      val storageRef=storage.getReferenceFromUrl("gs://reciclarity1.appspot.com")
+      val storageRef=storage.getReferenceFromUrl("gs://buttontry1.appspot.com")
       val df= SimpleDateFormat("ddMMyyHHmmss")
       val dataobj= Date()
       val imagePAth=SplitString(email) +  "." + df.format(dataobj)+".jpg"

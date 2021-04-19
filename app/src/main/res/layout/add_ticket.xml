@@ -1,18 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
-    android:layout_weight="1"
-    android:gravity="center"
-    android:background="@color/white"
-    android:layoutDirection="rtl"
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
-    android:textAlignment="center"
-
+    android:layout_weight="1"
+    android:background="@color/white"
     android:focusable="false"
-    android:focusableInTouchMode="false">
+    android:focusableInTouchMode="false"
+    android:gravity="center"
+    android:layoutDirection="rtl"
+
+    android:orientation="vertical"
+    android:textAlignment="center">
 
     <LinearLayout
         android:layout_width="fill_parent"
@@ -28,7 +27,9 @@
         android:paddingTop="2dp"
         android:paddingRight="5dp"
         android:paddingBottom="1dp"
-        android:textAlignment="center">
+        android:textAlignment="center"
+
+        >
 
 
         <EditText
@@ -37,62 +38,125 @@
             android:layout_height="50pt"
             android:ems="10"
             android:hint="What do you think?"
-            android:inputType="textMultiLine" />
+            android:inputType="textMultiLine"
+            android:textColor="#0C0C0C" />
+
 
         <LinearLayout
 
-            android:paddingLeft="10dp"
-            android:paddingRight="3dp"
-            android:paddingTop="3dp"
-            android:paddingBottom="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/browser_actions_bg_grey"
             android:layoutDirection="ltr"
             android:orientation="horizontal"
-            android:background="@drawable/background"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:paddingLeft="10dp"
+            android:paddingTop="3dp"
+            android:paddingRight="3dp"
+            android:paddingBottom="5dp">
 
             <ImageView
+
                 android:id="@+id/file"
-                android:layout_width="28dp"
-                android:layout_height="28dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
                 android:layout_marginRight="8dp"
-                android:layout_weight="1"
-                app:srcCompat="@drawable/ic_file" />
+                android:background="@drawable/ic_file" />
 
             <ImageView
-                android:id="@+id/send"
-                android:layout_width="41dp"
-                android:layout_height="28dp"
+
+                android:id="@+id/iv_send"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
                 android:layout_marginRight="8dp"
-                android:layout_weight="1"
-                app:srcCompat="@drawable/ic_send" />
+                android:background="@drawable/ic_send" />
 
         </LinearLayout>
 
-
-        <!--        <LinearLayout-->
-        <!--            android:layout_width="fill_parent"-->
-        <!--            android:layout_height="wrap_content"-->
-        <!--            android:layout_marginLeft="10dp"-->
-        <!--            android:layout_marginTop="5dp"-->
-        <!--            android:layout_marginRight="10dp"-->
-        <!--            android:layout_weight="1"-->
-        <!--            android:background="@drawable/background"-->
-        <!--            android:gravity="center"-->
-        <!--            android:layoutDirection="rtl"-->
-        <!--            android:orientation="vertical"-->
-        <!--            android:paddingTop="2dp"-->
-        <!--            android:paddingRight="5dp"-->
-        <!--            android:paddingBottom="1dp"-->
-        <!--            android:textAlignment="center">-->
-        <!--            -->
-        <!--        </LinearLayout>-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"></LinearLayout>
 
     </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"></LinearLayout>
-
 </LinearLayout>
+<!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<LinearLayout-->
+<!--    xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--    android:orientation="vertical"-->
+<!--    android:layout_weight="1"-->
+<!--    android:gravity="center"-->
+<!--    android:background="@color/white"-->
+<!--    android:layoutDirection="rtl"-->
+<!--    android:layout_width="fill_parent"-->
+<!--    android:layout_height="wrap_content"-->
+<!--    android:textAlignment="center"-->
+
+<!--    android:focusable="false"-->
+<!--    android:focusableInTouchMode="false">-->
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="fill_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginLeft="10dp"-->
+<!--        android:layout_marginTop="5dp"-->
+<!--        android:layout_marginRight="10dp"-->
+<!--        android:layout_weight="1"-->
+<!--        android:background="@drawable/background"-->
+<!--        android:gravity="center"-->
+<!--        android:layoutDirection="rtl"-->
+<!--        android:orientation="vertical"-->
+<!--        android:paddingTop="2dp"-->
+<!--        android:paddingRight="5dp"-->
+<!--        android:paddingBottom="1dp"-->
+<!--        android:textAlignment="center">-->
+
+
+<!--        <EditText-->
+<!--            android:id="@+id/etPost"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="50pt"-->
+<!--            android:ems="10"-->
+<!--            android:hint="What do you think?"-->
+<!--            android:inputType="textMultiLine" />-->
+
+<!--        <LinearLayout-->
+
+<!--            android:paddingLeft="10dp"-->
+<!--            android:paddingRight="3dp"-->
+<!--            android:paddingTop="3dp"-->
+<!--            android:paddingBottom="5dp"-->
+<!--            android:layoutDirection="ltr"-->
+<!--            android:orientation="horizontal"-->
+<!--            android:background="@drawable/background"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent">-->
+
+<!--            <ImageView-->
+<!--                android:id="@+id/file"-->
+<!--                android:layout_width="28dp"-->
+<!--                android:layout_height="28dp"-->
+<!--                android:layout_marginRight="8dp"-->
+<!--                android:layout_weight="1"-->
+<!--                app:srcCompat="@drawable/ic_file" />-->
+
+<!--            <ImageView-->
+<!--                android:id="@+id/send"-->
+<!--                android:layout_width="41dp"-->
+<!--                android:layout_height="28dp"-->
+<!--                android:layout_marginRight="8dp"-->
+<!--                android:layout_weight="1"-->
+<!--                app:srcCompat="@drawable/ic_send" />-->
+
+<!--        </LinearLayout>-->
+
+
+
+<!--    </LinearLayout>-->
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:orientation="vertical"></LinearLayout>-->
+
+<!--</LinearLayout>-->

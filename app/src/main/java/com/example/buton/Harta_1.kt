@@ -61,6 +61,7 @@ class Harta_1 : AppCompatActivity(), OnMapReadyCallback {
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        supportActionBar?.hide()
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_harta_1)
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.

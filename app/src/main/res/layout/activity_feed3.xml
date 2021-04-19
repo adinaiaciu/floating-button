@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+
+
+
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -7,15 +11,14 @@
     android:layout_height="match_parent"
     android:orientation="horizontal"
     android:background="@drawable/background"
-    tools:context="feed">
-
+    tools:context=".Feed_3">
 
 
     <ListView
-        android:id="@+id/lvTweets"
+        android:id="@+id/lvTweets_feed"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
-
+        android:layout_height="731dp" />
 
 
 </LinearLayout>
+
